@@ -41,7 +41,10 @@ class AttachMany extends Field
         $this->resourceName = $resource::uriKey();
         $this->manyToManyRelationship = $this->attribute;
 
-        $this->fillUsing(function($request, $model, $attribute, $requestAttribute) use($resource) {
+        // TODO: Fix this somehow
+        // I do not need this for my particular usecase
+        
+        /* $this->fillUsing(function($request, $model, $attribute, $requestAttribute) use($resource) {
             if(is_subclass_of($model, 'Illuminate\Database\Eloquent\Model')) {
                 $model::saved(function($model) use($attribute, $request) {
                     $model->$attribute()->sync(
@@ -51,7 +54,7 @@ class AttachMany extends Field
 
                 unset($request->$attribute);
             }
-        });
+        }); */
     }
 
     public function rules($rules)
