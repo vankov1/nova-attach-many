@@ -1,6 +1,6 @@
 {
     "name": "dillingham/nova-attach-many",
-    "description": "Attach Many Nova field",
+    "description": "Attach Many Nova field with slight change",
     "keywords": [
         "laravel",
         "nova"
